@@ -1,0 +1,1522 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Mi Librería</title>
+</head>
+<body>
+    <header>
+        <h1>Libreria Sandri</h1>
+      </header>
+
+      <main>
+
+        <!-- filtros  -->
+        
+        <div id="filters">
+            <label for="autorFilter">Filtrar por Autor:</label>
+            <input type="text" id="autorFilter" oninput="filterTable()" placeholder="Escribe el autor">
+          
+            <label for="precioFilter">Filtrar por Precio:</label>
+            <input type="number" id="precioFilter" oninput="filterTable()" placeholder="Escribe el precio">
+          
+            <label for="estadoFilter">Filtrar por Estado:</label>
+            <select id="estadoFilter" onchange="filterTable()">
+              <option value="">Todos</option>
+              <option value="En Venta">En Venta</option>
+              <option value="Reservado">Reservado</option>
+              <option value="Vendido">Vendido</option>
+              <option value="No Venta">No Venta</option>
+
+            </select>
+          </div>
+
+
+  <table id="librosTabla" contenteditable="true">
+    <thead>
+      <tr>
+        <th>Numero</th>
+        <th>Nombre del Libro</th>
+        <th>Autor</th>
+        <th>Precio</th>
+        <th>Foto</th>
+        <th>Estado</th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      <!-- Puedes agregar filas aquí directamente si lo deseas -->
+      <tr>
+        <td>1</td>
+        <td>El Zorro</td>
+        <td>Isabel Allende</td>
+        <td>7€</td>
+        <td>
+            <img src="img/portadas/0001_El zorro.JPG" alt="coverBook" onclick="mostrarImagenAmpliada(this)">
+        </td>
+        <td>En Venta</td>
+        <td><button onclick="window.open('#', '_blank')">Ir a Wallapop</button></td>
+    </tr>
+  <!-- Puedes agregar más filas aquí si lo deseas -->
+
+  <tr>
+    <td>2</td>
+
+    <td>EL sol de Breda- Alatriste </td>
+    <td>Arturo Pérez Reverte</td>
+    <td>5€</td>
+    <td><img src="img/portadas/0002_ El sol de breda.JPG" alt="coverBook"onclick="mostrarImagenAmpliada(this)" >
+    </td>    <td>En Venta</td>
+    <td><button onclick="window.open('#', '_blank')">Ir a Wallapop</button></td>
+
+</tr>
+
+<tr>
+  <td>3</td>
+
+  <td>Limpiza de sangre - Alatriste</td>
+  <td>Arturo Perez </td>
+  <td>4€</td>
+  <td><img src="img/portadas/0003_limpieza de sangre.JPG" alt="coverBook"onclick="mostrarImagenAmpliada(this)">
+  </td>    <td>En Venta</td>
+  <td><button onclick="window.open('#', '_blank')">Ir a Wallapop</button></td>
+
+</tr>
+
+<tr>
+  <td>4</td>
+
+  <td>Smallville Comics Colección Completa 11 números </td>
+  <td>Varios </td>
+  <td>50€</td>
+  <td><img src="https://cdn.wallapop.com/images/10420/en/dn/__/c10420p885794229/i3207078831.jpg?pictureSize=W640" alt="coverBook"onclick="mostrarImagenAmpliada(this)"></td>    <td>En Venta</td>
+  <td><button onclick="window.open('https://es.wallapop.com/item/smallville-comics-coleccion-completa-11-numeros-885794229', '_blank')">Ir a Wallapop</button></td>
+
+</tr>
+
+<tr>
+  <td>5</td>
+
+  <td>Comic la historias de Alan Moore Superman</td>
+  <td>Alan Moore </td>
+  <td>40€</td>
+  <td><img src="https://cdn.wallapop.com/images/10420/en/dj/__/c10420p885788861/i3207043603.jpg?pictureSize=W640" alt="coverBook"onclick="mostrarImagenAmpliada(this)"></td>    <td>En Venta</td>
+  <td><button onclick="window.open('https://es.wallapop.com/item/comic-las-historias-de-alan-moore-superman-885788861', '_blank')">Ir a Wallapop</button></td>
+
+</tr>
+
+<tr>
+  <td>6</td>
+
+  <td>Spiderman: Las historias Jamás contadas completa</td>
+  <td>Varios </td>
+  <td>60€</td>
+  <td><img src="https://cdn.wallapop.com/images/10420/en/df/__/c10420p885783804/i3207010965.jpg?pictureSize=W640" alt="coverBook"onclick="mostrarImagenAmpliada(this)"></td>    <td>En Venta</td>
+  <td><button onclick="window.open('https://es.wallapop.com/item/spiderman-las-historias-jamas-contadas-completa-885783804', '_blank')">Ir a Wallapop</button></td>
+
+</tr>
+
+
+<tr>
+  <td>7</td>
+
+  <td>La conjura de  las reinas  </td>
+  <td> Valerio Massimo Manfredi</td>
+  <td>4€</td>
+  <td><img src="img/portadas/0004_La conjura de las reinas.JPG" alt="coverBook"onclick="mostrarImagenAmpliada(this)"></td>    <td>No Venta</td>
+  <td><button onclick="window.open('#', '_blank')">Ir a Wallapop</button></td>
+
+</tr>
+
+<tr>
+  <td>8</td>
+
+  <td>El confín del mundo - Alexandros III</td>
+  <td>Valerio Massimo Manfredi</td>
+  <td>5€</td>
+  <td><img src="img/portadas/0005_El confin del mundo.JPG" alt="coverBook"onclick="mostrarImagenAmpliada(this)"></td>    <td>No Venta</td>
+  <td><button onclick="window.open('#', '_blank')">Ir a Wallapop</button></td>
+
+</tr>
+
+<tr>
+  <td>9</td>
+
+  <td>El hijo del sueño - Alexandros I</td>
+  <td>Valerio Massimo Manfredi</td>
+  <td>5€</td>
+  <td><img src="img/portadas/0006_El hijo del sueño.JPG" alt="coverBook"onclick="mostrarImagenAmpliada(this)"></td>    <td>No Venta</td>
+  <td><button onclick="window.open('#', '_blank')">Ir a Wallapop</button></td>
+
+</tr>
+
+<tr>
+  <td>10</td>
+
+  <td>Las arenas de Amón - Alexandros II</td>
+  <td>Valerio Massimo Manfredi</td>
+  <td>5€</td>
+  <td><img src="img/portadas/0007_Las arenas de Amon.JPG" alt="coverBook"onclick="mostrarImagenAmpliada(this)"></td>    <td>No Venta</td>
+  <td><button onclick="window.open('#', '_blank')">Ir a Wallapop</button></td>
+
+</tr>
+
+<tr>
+  <td>11</td>
+
+  <td>La piedra Filosofal - Harry Potter </td>
+  <td>J. K Rowling</td>
+  <td>5€</td>
+  <td><img src="img/portadas/0008_HP_ls piedra filosofal.JPG" alt="coverBook"onclick="mostrarImagenAmpliada(this)"></td>    <td>No Venta</td>
+  <td><button onclick="window.open('#', '_blank')">Ir a Wallapop</button></td>
+
+</tr>
+
+
+<tr>
+  <td>12</td>
+
+  <td>La camara secreta - Harry Potter </td>
+  <td>J. K Rowling</td>
+  <td>8€</td>
+  <td><img src="img/portadas/0009_HP_la camara secreta.JPG" alt="coverBook"onclick="mostrarImagenAmpliada(this)"></td>    <td>No Venta</td>
+  <td><button onclick="window.open('#', '_blank')">Ir a Wallapop</button></td>
+
+</tr>
+
+
+<tr>
+  <td>13</td>
+
+  <td>el prisionera de Azkaban - Harry Potter </td>
+  <td>J. K Rowling</td>
+  <td>8€</td>
+  <td><img src="img/portadas/00010_HP_El prisionero de Azkaban.JPG" alt="coverBook"onclick="mostrarImagenAmpliada(this)"></td>    <td>No Venta</td>
+  <td><button onclick="window.open('#', '_blank')">Ir a Wallapop</button></td>
+
+</tr>
+
+<tr>
+  <td>14</td>
+
+  <td>El caliz de fuego - Harry Potter </td>
+  <td>J. K Rowling</td>
+  <td>8€</td>
+  <td><img src="img/portadas/00011_HP_El caliz de fuego.JPG" alt="coverBook"onclick="mostrarImagenAmpliada(this)"></td>    <td>No Venta</td>
+  <td><button onclick="window.open('#', '_blank')">Ir a Wallapop</button></td>
+
+</tr>
+
+
+<tr>
+  <td>15</td>
+
+  <td>El orden del fenix - Harry Potter </td>
+  <td>J. K Rowling</td>
+  <td>8€</td>
+  <td><img src="img/portadas/00012_HP_El orden del fenix.JPG" alt="coverBook"onclick="mostrarImagenAmpliada(this)"></td>    <td>No Venta</td>
+  <td><button onclick="window.open('#', '_blank')">Ir a Wallapop</button></td>
+
+</tr>
+
+<tr>
+  <td>16</td>
+
+  <td>Las reliquias de la muerte - Harry Potter </td>
+  <td>J. K Rowling</td>
+  <td>8€</td>
+  <td><img src="img/portadas/00013_HP_Las reliquias de la muerte.JPG" alt="coverBook"onclick="mostrarImagenAmpliada(this)"></td>    <td>No Venta</td>
+  <td><button onclick="window.open('#', '_blank')">Ir a Wallapop</button></td>
+
+</tr>
+
+<tr>
+  <td>17</td>
+
+  <td>La piramide asesina  </td>
+  <td> Chistian Jacq</td>
+  <td>4€</td>
+  <td><img src="img/portadas/00014_La piramide asesinada.JPG" alt="coverBook"onclick="mostrarImagenAmpliada(this)"></td>    <td>No Venta</td>
+  <td><button onclick="window.open('#', '_blank')">Ir a Wallapop</button></td>
+
+</tr>
+
+<tr>
+  <td>18</td>
+
+  <td> Ramsés : El hijo de la luz </td>
+  <td> Chistian Jacq</td>
+  <td>4€</td>
+  <td><img src="img/portadas/00016_el hijo de la luz.JPG" alt="coverBook"onclick="mostrarImagenAmpliada(this)"></td>    <td>No Venta</td>
+  <td><button onclick="window.open('#', '_blank')">Ir a Wallapop</button></td>
+
+</tr>
+
+<tr>
+  <td>19</td>
+
+  <td>La piramide asesina  </td>
+  <td> Chistian Jacq</td>
+  <td>4€</td>
+  <td><img src="img/portadas/00016_el hijo de la luz.JPG" alt="coverBook"onclick="mostrarImagenAmpliada(this)"></td>    <td>No Venta</td>
+  <td><button onclick="window.open('#', '_blank')">Ir a Wallapop</button></td>
+
+</tr>
+
+<tr>
+  <td>20</td>
+
+  <td>Ramsés : El templo de millones de años   </td>
+  <td> Chistian Jacq</td>
+  <td>4€</td>
+  <td><img src="img/portadas/00017_el templo de millones de años.JPG" alt="coverBook"onclick="mostrarImagenAmpliada(this)"></td>    <td>No Venta</td>
+  <td><button onclick="window.open('#', '_blank')">Ir a Wallapop</button></td>
+
+</tr>
+
+
+<tr>
+  <td>21</td>
+
+  <td>La piedra de la luz : Nefer el silencioso  </td>
+  <td> Chistian Jacq</td>
+  <td>4€</td>
+  <td><img src="img/portadas/00018_Nefer el silencioso.JPG" alt="coverBook"onclick="mostrarImagenAmpliada(this)">
+  </td>    <td>No Venta</td>
+  <td><button onclick="window.open('#', '_blank')">Ir a Wallapop</button></td>
+
+</tr>
+
+
+<tr>
+  <td>22</td>
+
+  <td>Trilogia del señor de los anillos   </td>
+  <td> J.R.R Tolkien</td>
+  <td>100€</td>
+  <td><img src="img/portadas/00015_trilogia el señor de los anillos.JPG" alt="coverBook"onclick="mostrarImagenAmpliada(this)"></td>    <td>No Venta</td>
+  <td><button onclick="window.open('#', '_blank')">Ir a Wallapop</button></td>
+
+</tr>
+
+<!--  -->
+
+
+<tr>
+  <td>23</td>
+
+  <td>El Hobbit  </td>
+  <td> J.R.R Tolkien</td>
+  <td>8€</td>
+  <td><img src="img/portadas/00066_hobbit.JPG" alt="coverBook"onclick="mostrarImagenAmpliada(this)"></td>    <td>No Venta</td>
+  <td><button onclick="window.open('#', '_blank')">Ir a Wallapop</button></td>
+
+</tr>
+
+
+<tr>
+  <td>24</td>
+
+  <td>El silmarillón    </td>
+  <td> J.R.R Tolkien</td>
+  <td>8€</td>
+  <td><img src="img/portadas/00067_el silmarrilon.JPG" alt="coverBook"onclick="mostrarImagenAmpliada(this)"></td>    <td>No Venta</td>
+  <td><button onclick="window.open('#', '_blank')">Ir a Wallapop</button></td>
+
+</tr>
+
+
+<tr>
+  <td>25</td>
+
+  <td>Los hijos de Hurin  </td>
+  <td> J.R.R Tolkien  </td>
+  <td>20€</td>
+  <td><img src="img/portadas/00069_hijos hurin.JPG" alt="coverBook"onclick="mostrarImagenAmpliada(this)"></td>    <td>No Venta</td>
+  <td><button onclick="window.open('#', '_blank')">Ir a Wallapop</button></td>
+
+</tr>
+
+
+<tr>
+  <td>26</td>
+
+  <td>Museo del miedo </td>
+  <td> Hilario J.Rodríguez </td>
+  <td>35€</td>
+  <td><img src="img/portadas/00019_El museo del miedo.JPG" alt="coverBook"onclick="mostrarImagenAmpliada(this)"></td>    <td>No Venta</td>
+  <td><button onclick="window.open('#', '_blank')">Ir a Wallapop</button></td>
+
+</tr>
+
+
+
+<tr>
+  <td>27</td>
+
+  <td>Batman Barcelona - El cavaller i el drac  </td>
+  <td> Varios</td>
+  <td>10€</td>
+  <td><img src="img/portadas/00020_Batman_barcelona.JPG" alt="coverBook"onclick="mostrarImagenAmpliada(this)"></td>    <td>No Venta</td>
+  <td><button onclick="window.open('#', '_blank')">Ir a Wallapop</button></td>
+
+</tr>
+
+
+<tr>
+  <td>28</td>
+
+  <td>El Codigo Da Vinci   </td>
+  <td> Dan Brown </td>
+  <td>5€</td>
+  <td><img src="img/portadas/00021_El codigo da vinci.JPG" alt="coverBook"onclick="mostrarImagenAmpliada(this)"></td>    <td>No Venta</td>
+  <td><button onclick="window.open('#', '_blank')">Ir a Wallapop</button></td>
+
+</tr>
+
+
+<tr>
+  <td>29</td>
+
+  <td>Ella lo sabe    </td>
+  <td> Lorena Franco</td>
+  <td>5€</td>
+  <td><img src="img/portadas/00022_Ella lo sabe.JPG" alt="coverBook"onclick="mostrarImagenAmpliada(this)"></td>    <td>No Venta</td>
+  <td><button onclick="window.open('#', '_blank')">Ir a Wallapop</button></td>
+
+</tr>
+
+
+<tr>
+  <td>30</td>
+
+  <td>Daisy Miller | Otra vuelta de tuerca    </td>
+  <td> Henry James</td>
+  <td>5€</td>
+  <td><img src="img/portadas/00023_Otra vuelta de tuerca.JPG" alt="coverBook"onclick="mostrarImagenAmpliada(this)"></td>    <td>No Venta</td>
+  <td><button onclick="window.open('#', '_blank')">Ir a Wallapop</button></td>
+
+</tr>
+
+
+<tr>
+  <td>31</td>
+
+  <td>Una ciudad llamada olvido</td>
+  <td> Alfons Carrasco</td>
+  <td>16€</td>
+  <td><img src="img/portadas/00024_Una ciudad llamada olvido.JPG" alt="coverBook"onclick="mostrarImagenAmpliada(this)"></td>    <td>No Venta</td>
+  <td><button onclick="window.open('#', '_blank')">Ir a Wallapop</button></td>
+
+</tr>
+
+
+<tr>
+  <td>32</td>
+
+  <td>El fantasma de Marilyn    </td>
+  <td> Lorena Franco</td>
+  <td>5€</td>
+  <td><img src="img/portadas/00025_El fantasma de Marilin.JPG" alt="coverBook"onclick="mostrarImagenAmpliada(this)"></td>    <td>No Venta</td>
+  <td><button onclick="window.open('#', '_blank')">Ir a Wallapop</button></td>
+
+</tr>
+
+
+<tr>
+  <td>33</td>
+
+  <td>Los pilares de la Tierra</td>
+  <td> Ken Follett</td>
+  <td>5€</td>
+  <td><img src="img/portadas/00026_Los pilares de la tierra.JPG" alt="coverBook"onclick="mostrarImagenAmpliada(this)"></td>    <td>En Venta</td>
+  <td><button onclick="window.open('#', '_blank')">Ir a Wallapop</button></td>
+
+</tr>
+
+
+<tr>
+  <td>34</td>
+
+  <td>La ciencia y la vida   </td>
+  <td> Valentín Fuster | José Luís Sampedro</td>
+  <td>3€</td>
+  <td><img src="img/portadas/00027_La ciencia y la vida.JPG" alt="coverBook"onclick="mostrarImagenAmpliada(this)"></td>    <td>No Venta</td>
+  <td><button onclick="window.open('#', '_blank')">Ir a Wallapop</button></td>
+
+</tr>
+
+
+<tr>
+  <td>35</td>
+
+  <td>Monster Show     </td>
+  <td> David J Skal</td>
+  <td>80€</td>
+  <td><img src="img/portadas/00030_monster show.JPG" alt="coverBook"onclick="mostrarImagenAmpliada(this)"></td>    <td>No Venta</td>
+  <td><button onclick="window.open('#', '_blank')">Ir a Wallapop</button></td>
+
+</tr>
+
+
+<tr>
+  <td>36</td>
+
+  <td>La Regenta  </td>
+  <td> Leopoldo Alas clarin</td>
+  <td>5€</td>
+  <td><img src="img/portadas/00031_la regentaJPG" alt="coverBook"onclick="mostrarImagenAmpliada(this)"></td>    <td>No Venta</td>
+  <td><button onclick="window.open('#', '_blank')">Ir a Wallapop</button></td>
+
+</tr>
+
+<tr>
+  <td>37</td>
+
+  <td>Brian de Palma- El deslumbrante manipulador  </td>
+  <td> Jordi Batlle</td>
+  <td>4€</td>
+  <td><img src="img/portadas/00032_brian de palma.JPG" alt="coverBook"onclick="mostrarImagenAmpliada(this)"></td>    <td>No Venta</td>
+  <td><button onclick="window.open('#', '_blank')">Ir a Wallapop</button></td>
+
+</tr>
+
+
+<tr>
+  <td>38</td>
+
+  <td>Antologia poética de Miguel Hernández </td>
+  <td> Miguel Hernández</td>
+  <td>12€</td>
+  <td><img src="img/portadas/00033_miguel hernandez.JPG" alt="coverBook"onclick="mostrarImagenAmpliada(this)"></td>    <td>No Venta</td>
+  <td><button onclick="window.open('#', '_blank')">Ir a Wallapop</button></td>
+
+</tr>
+
+
+<tr>
+  <td>39</td>
+
+  <td> Veinte poemas de amor y una canción desesperada | Cien sonetos de amor </td>
+  <td> Pablo Neruda</td>
+  <td>5€</td>
+  <td><img src="img/portadas/00034_Neruda 20 poemas de amor.JPG" alt="coverBook"onclick="mostrarImagenAmpliada(this)"></td>    <td>No Venta</td>
+  <td><button onclick="window.open('#', '_blank')">Ir a Wallapop</button></td>
+
+</tr>
+
+
+<tr>
+  <td>40</td>
+
+  <td>Rimas y leyendas </td>
+  <td> Gustavo Adolfo Bequer </td>
+  <td>6€</td>
+  <td><img src="img/portadas/00035_becker.JPG" alt="coverBook"onclick="mostrarImagenAmpliada(this)"></td>    <td>No Venta</td>
+  <td><button onclick="window.open('#', '_blank')">Ir a Wallapop</button></td>
+
+</tr>
+
+
+<tr>
+  <td>41</td>
+
+  <td>La clave secreta del universo   </td>
+  <td> Lucy & Stephen Hawking</td>
+  <td>6€</td>
+  <td><img src="img/portadas/00036_clave secreta del universo.JPG" alt="coverBook"onclick="mostrarImagenAmpliada(this)"></td>    <td>No Venta</td>
+  <td><button onclick="window.open('#', '_blank')">Ir a Wallapop</button></td>
+
+</tr>
+
+
+<tr>
+  <td>42</td>
+
+  <td>El Dragón Rojo   </td>
+  <td> Thomas Harris</td>
+  <td>3€</td>
+  <td><img src="img/portadas/00037_El dragon rojo.JPG" alt="coverBook"onclick="mostrarImagenAmpliada(this)"></td>    <td>No Venta</td>
+  <td><button onclick="window.open('#', '_blank')">Ir a Wallapop</button></td>
+
+</tr>
+
+
+<tr>
+  <td>43</td>
+
+  <td>Domingo negro  </td>
+  <td> Thomas Harris</td>
+  <td>2€</td>
+  <td><img src="img/portadas/00038_Domingo negro.JPG" alt="coverBook"onclick="mostrarImagenAmpliada(this)"></td>    <td>No Venta</td>
+  <td><button onclick="window.open('#', '_blank')">Ir a Wallapop</button></td>
+
+</tr>
+
+<tr>
+  <td>44</td>
+
+  <td> Hannibal el origen del mal  </td>
+  <td> Thomas Harris</td>
+  <td>8€</td>
+  <td><img src="img/portadas/00039_hannibal el origen del mal.JPG" alt="coverBook"onclick="mostrarImagenAmpliada(this)"></td>    <td>No Venta</td>
+  <td><button onclick="window.open('#', '_blank')">Ir a Wallapop</button></td>
+
+</tr>
+
+
+<tr>
+  <td>45</td>
+
+  <td>Hannibal </td>
+  <td> Thomas Harris</td>
+  <td>10€</td>
+  <td><img src="img/portadas/00040_hannibal .JPG" alt="coverBook"onclick="mostrarImagenAmpliada(this)"></td>    <td>No Venta</td>
+  <td><button onclick="window.open('#', '_blank')">Ir a Wallapop</button></td>
+
+</tr>
+
+<tr>
+  <td>46</td>
+
+  <td>El silencio de los corderos  </td>
+  <td> J.R.R Tolkien</td>
+  <td>10€</td>
+  <td><img src="img/portadas/00041_el silemcio de los corderos .JPG" alt="coverBook"onclick="mostrarImagenAmpliada(this)"></td>    <td>No Venta</td>
+  <td><button onclick="window.open('#', '_blank')">Ir a Wallapop</button></td>
+
+</tr>
+
+<tr>
+  <td>47</td>
+
+  <td>El capitán Alatriste - Cómic  </td>
+  <td> Arturo Perez Reverte</td>
+  <td>5€</td>
+  <td><img src="img/portadas/00042_el capitan alatriste .JPG" alt="coverBook"onclick="mostrarImagenAmpliada(this)"></td>    <td>No Venta</td>
+  <td><button onclick="window.open('#', '_blank')">Ir a Wallapop</button></td>
+
+</tr>
+
+
+
+<tr>
+  <td>48</td>
+
+  <td>Vampiras - Antologia de relatos</td>
+  <td> Varios</td>
+  <td>10€</td>
+  <td><img src="img/portadas/00044_Vampiras.JPG" alt="coverBook"onclick="mostrarImagenAmpliada(this)"></td>    <td>No Venta</td>
+  <td><button onclick="window.open('#', '_blank')">Ir a Wallapop</button></td>
+
+</tr>
+
+<tr>
+  <td>49</td>
+
+  <td>El mercader de Venècia  </td>
+  <td> William Shakespeare</td>
+  <td>2€</td>
+  <td><img src="img/portadas/00028_El mercader de Venecia.JPG" alt="coverBook"onclick="mostrarImagenAmpliada(this)"></td>    <td>No Venta</td>
+  <td><button onclick="window.open('#', '_blank')">Ir a Wallapop</button></td>
+
+</tr>
+
+<tr>
+  <td>50</td>
+
+  <td>Mucho ruido y pocas nueces </td>
+  <td> Williams Shakespeare</td>
+  <td>5€</td>
+  <td><img src="img/portadas/00043_Mucho ruido y pocas nueces .JPG" alt="coverBook"onclick="mostrarImagenAmpliada(this)"></td>    <td>No Venta</td>
+  <td><button onclick="window.open('#', '_blank')">Ir a Wallapop</button></td>
+
+</tr>
+
+<tr>
+  <td>51</td>
+
+  <td>L'amansiment de l'harpia </td>
+  <td> Williams Shakespeare</td>
+  <td>8€</td>
+  <td><img src="img/portadas/00045_Amansiment de harpia.JPG" alt="coverBook"onclick="mostrarImagenAmpliada(this)"></td>    <td>No Venta</td>
+  <td><button onclick="window.open('#', '_blank')">Ir a Wallapop</button></td>
+
+</tr>
+
+<tr>
+  <td>52</td>
+
+  <td>Noche de reyes | El sueño de una noche de verano  </td>
+  <td> Williams Shakespeare</td>
+  <td>4€</td>
+  <td><img src="img/portadas/00046_Noche de reyes....JPG" alt="coverBook"onclick="mostrarImagenAmpliada(this)"></td>    <td>No Venta</td>
+  <td><button onclick="window.open('#', '_blank')">Ir a Wallapop</button></td>
+
+</tr>
+
+
+<tr>
+  <td>53</td>
+
+  <td>Enric V  </td>
+  <td> Williams Shakespeare</td>
+  <td>15€</td>
+  <td><img src="img/portadas/00052_Enrique V.JPG" alt="coverBook"onclick="mostrarImagenAmpliada(this)"></td>    <td>No Venta</td>
+  <td><button onclick="window.open('#', '_blank')">Ir a Wallapop</button></td>
+
+</tr>
+
+<tr>
+  <td>54</td>
+
+  <td>Hamlet  </td>
+  <td> Williams Shakespeare</td>
+  <td>4€</td>
+  <td><img src="img/portadas/00053_hamlet.JPG" alt="coverBook"onclick="mostrarImagenAmpliada(this)"></td>    <td>No Venta</td>
+  <td><button onclick="window.open('#', '_blank')">Ir a Wallapop</button></td>
+
+</tr>
+
+<tr>
+  <td>55</td>
+
+  <td>Sonetos </td>
+  <td> Williams Shakespeare</td>
+  <td>10€</td>
+  <td><img src="img/portadas/00054_sonetos shakespeare.JPG" alt="coverBook"onclick="mostrarImagenAmpliada(this)"></td>    <td>No Venta</td>
+  <td><button onclick="window.open('#', '_blank')">Ir a Wallapop</button></td>
+
+</tr>
+
+<tr>
+  <td>56</td>
+
+  <td>Romeo y Julieta </td>
+  <td> Williams Shakespeare</td>
+  <td>10€</td>
+  <td><img src="img/portadas/00055_romeo y julieta.JPG" alt="coverBook"onclick="mostrarImagenAmpliada(this)"></td>    <td>No Venta</td>
+  <td><button onclick="window.open('#', '_blank')">Ir a Wallapop</button></td>
+
+</tr>
+<tr>
+  <td>57</td>
+
+  <td>Soy leyenda </td>
+  <td> Richard Matheson </td>
+  <td>6€</td>
+  <td><img src="img/portadas/00047_soy leyenda.JPG" alt="coverBook"onclick="mostrarImagenAmpliada(this)"></td>    <td>No Venta</td>
+  <td><button onclick="window.open('#', '_blank')">Ir a Wallapop</button></td>
+
+</tr>
+
+<tr>
+  <td>58</td>
+
+  <td>Tened mucho miedo-leyendas urbanas  </td>
+  <td> Jan Harold Brunvand</td>
+  <td>10€</td>
+  <td><img src="img/portadas/00048_tened mucho miedo.JPG" alt="coverBook"onclick="mostrarImagenAmpliada(this)"></td>    <td>No Venta</td>
+  <td><button onclick="window.open('#', '_blank')">Ir a Wallapop</button></td>
+
+</tr>
+
+<tr>
+  <td>59</td>
+
+  <td>Greta Garbo  </td>
+  <td> Marcelo Di Pietro</td>
+  <td>2€</td>
+  <td><img src="img/portadas/00049_rGreta Garbo.JPG" alt="coverBook"onclick="mostrarImagenAmpliada(this)"></td>    <td>No Venta</td>
+  <td><button onclick="window.open('#', '_blank')">Ir a Wallapop</button></td>
+
+</tr>
+
+<tr>
+  <td>60</td>
+
+  <td>Biografia Woody Allen   </td>
+  <td> Eric Lax</td>
+  <td>3€</td>
+  <td><img src="img/portadas/00049_Woody Allen.JPG" alt="coverBook"onclick="mostrarImagenAmpliada(this)"></td>    <td>No Venta</td>
+  <td><button onclick="window.open('#', '_blank')">Ir a Wallapop</button></td>
+
+</tr>
+
+<tr>
+  <td>61</td>
+
+  <td>1984  </td>
+  <td> George Orwell</td>
+  <td>4€</td>
+  <td><img src="img/portadas/00050_1984.JPG" alt="coverBook"onclick="mostrarImagenAmpliada(this)"></td>    <td>No Venta</td>
+  <td><button onclick="window.open('#', '_blank')">Ir a Wallapop</button></td>
+
+</tr>
+
+<tr>
+  <td>62</td>
+
+  <td>Eloisa está debajo de un almendro | Las cinco advertencias de Satanás  </td>
+  <td> Enrique Jardiel Poncela </td>
+  <td>4€</td>
+  <td><img src="img/portadas/00051_Poncela.JPG" alt="coverBook"onclick="mostrarImagenAmpliada(this)"></td>    <td>No Venta</td>
+  <td><button onclick="window.open('#', '_blank')">Ir a Wallapop</button></td>
+
+</tr>
+
+
+<tr>
+  <td>63</td>
+
+  <td>Poesia Josep Carner  </td>
+  <td> Josep Carner</td>
+  <td>6€</td>
+  <td><img src="img/portadas/00056_josepp carner.JPG" alt="coverBook"onclick="mostrarImagenAmpliada(this)"></td>    <td>No Venta</td>
+  <td><button onclick="window.open('#', '_blank')">Ir a Wallapop</button></td>
+
+</tr>
+
+
+<tr>
+  <td>64</td>
+
+  <td>Regreso al futuro- La historia visual definitiva  </td>
+  <td>Michael Klastorin | Randal Atamaniuk |  </td>
+  <td>450€</td>
+  <td><img src="img/portadas/00057_Regreso al futuro.JPG" alt="coverBook"onclick="mostrarImagenAmpliada(this)"></td>    <td>No Venta</td>
+  <td><button onclick="window.open('#', '_blank')">Ir a Wallapop</button></td>
+
+</tr>
+
+
+<tr>
+  <td>65</td>
+
+  <td>Hitchcock Truffaut  </td>
+  <td> George Orwell</td>
+  <td>175€</td>
+  <td><img src="img/portadas/00058_Hitchcock trufeau.JPG" alt="coverBook"onclick="mostrarImagenAmpliada(this)"></td>    <td>No Venta</td>
+  <td><button onclick="window.open('#', '_blank')">Ir a Wallapop</button></td>
+
+</tr>
+
+
+<tr>
+  <td>66</td>
+
+  <td>Antologia Disney   </td>
+  <td> Varios</td>
+  <td>15€</td>
+  <td><img src="img/portadas/00059_Antologia Disney.JPG" alt="coverBook"onclick="mostrarImagenAmpliada(this)"></td>    <td>No Venta</td>
+  <td><button onclick="window.open('#', '_blank')">Ir a Wallapop</button></td>
+
+</tr>
+
+<tr>
+  <td>67</td>
+
+  <td>Antoni Gaudi </td>
+  <td> Varios</td>
+  <td>10€</td>
+  <td><img src="img/portadas/00060_Antoni Gaudi.JPG" alt="coverBook"onclick="mostrarImagenAmpliada(this)"></td>    <td>No Venta</td>
+  <td><button onclick="window.open('#', '_blank')">Ir a Wallapop</button></td>
+
+</tr>
+
+
+<tr>
+  <td>68</td>
+
+  <td>Céline Dion Pour Toujours...  </td>
+  <td> Varios</td>
+  <td>10€</td>
+  <td><img src="img/portadas/00061_celine dion.JPG" alt="coverBook"onclick="mostrarImagenAmpliada(this)"></td>    <td>No Venta</td>
+  <td><button onclick="window.open('#', '_blank')">Ir a Wallapop</button></td>
+
+</tr>
+
+
+<tr>
+  <td>69</td>
+
+  <td>Mitología- Todos los mitos y leyendas del mundo   </td>
+  <td> Varios</td>
+  <td>90€</td>
+  <td><img src="img/portadas/00062_mitologia.JPG" alt="coverBook"onclick="mostrarImagenAmpliada(this)"></td>    <td>No Venta</td>
+  <td><button onclick="window.open('#', '_blank')">Ir a Wallapop</button></td>
+
+</tr>
+
+<tr>
+  <td>70</td>
+
+  <td>Dracula    </td>
+  <td> Bram Stoker </td>
+  <td>9€</td>
+  <td><img src="img/portadas/00079-dracula.JPG" alt="coverBook"onclick="mostrarImagenAmpliada(this)"></td>    <td>No Venta</td>
+  <td><button onclick="window.open('#', '_blank')">Ir a Wallapop</button></td>
+
+</tr>
+
+<tr>
+  <td>71</td>
+
+  <td>La guia definitiva del hombre de acero- Superman   </td>
+  <td> Scott Beativ</td>
+  <td>15€</td>
+  <td><img src="img/portadas/00063_guia_superman.JPG" alt="coverBook"onclick="mostrarImagenAmpliada(this)"></td>    <td>No Venta</td>
+  <td><button onclick="window.open('#', '_blank')">Ir a Wallapop</button></td>
+
+</tr>
+
+<tr>
+  <td>72</td>
+
+  <td>Miracle    </td>
+  <td> Anne Geddes  | Céline Dion </td>
+  <td>20€</td>
+  <td><img src="img/portadas/00064_dion geddes.JPG" alt="coverBook"onclick="mostrarImagenAmpliada(this)"></td>    <td>No Venta</td>
+  <td><button onclick="window.open('#', '_blank')">Ir a Wallapop</button></td>
+
+</tr>
+
+
+<tr>
+  <td>73</td>
+
+  <td>Mis immortales del cine   </td>
+  <td> Terenci Moix  </td>
+  <td>40€</td>
+  <td><img src="img/portadas/00065_mis inmortales del cine.JPG" alt="coverBook"onclick="mostrarImagenAmpliada(this)"></td>    <td>No Venta</td>
+  <td><button onclick="window.open('#', '_blank')">Ir a Wallapop</button></td>
+
+</tr>
+
+
+
+<tr>
+  <td>74</td>
+
+  <td>The dead of Superman - Cómic  </td>
+  <td> Dan Jurgens </td>
+  <td>15€</td>
+  <td><img src="img/portadas/00068_the dead of superman.JPG" alt="coverBook"onclick="mostrarImagenAmpliada(this)"></td>    <td>No Venta</td>
+  <td><button onclick="window.open('#', '_blank')">Ir a Wallapop</button></td>
+
+</tr>
+
+
+<tr>
+  <td>75</td>
+
+  <td>Superman Legado - Cómic  </td>
+  <td> Varios </td>
+  <td>12€</td>
+  <td><img src="img/portadas/00070_superman-legado.JPG" alt="coverBook"onclick="mostrarImagenAmpliada(this)"></td>    <td>No Venta</td>
+  <td><button onclick="window.open('#', '_blank')">Ir a Wallapop</button></td>
+
+</tr>
+
+
+<tr>
+  <td>76</td>
+
+  <td>Superman Batman Enemigos públicos - Comic  </td>
+  <td> Varios </td>
+  <td>15€</td>
+  <td><img src="img/portadas/00071-superman-batman_enemigos publicos.JPG" alt="coverBook"onclick="mostrarImagenAmpliada(this)"></td>    <td>No Venta</td>
+  <td><button onclick="window.open('#', '_blank')">Ir a Wallapop</button></td>
+
+</tr>
+
+<!--  -->
+
+<tr>
+  <td>77</td>
+
+  <td>Ray Harryhausen - El mago del Stop motion  </td>
+  <td> Carlos Díaz Maroto </td>
+  <td>190€</td>
+  <td><img src="img/portadas/00072-RayHarryhaussen.JPG" alt="coverBook"onclick="mostrarImagenAmpliada(this)"></td>    <td>No Venta</td>
+  <td><button onclick="window.open('#', '_blank')">Ir a Wallapop</button></td>
+
+</tr>
+
+<tr>
+  <td>78</td>
+
+  <td>Las series que no me dejan dormir   </td>
+  <td> Toni de la Torre </td>
+  <td>5€</td>
+  <td><img src="img/portadas/00073-las series q no dejan dormir.JPG" alt="coverBook"onclick="mostrarImagenAmpliada(this)"></td>    <td>No Venta</td>
+  <td><button onclick="window.open('#', '_blank')">Ir a Wallapop</button></td>
+
+</tr>
+
+
+<tr>
+  <td>79</td>
+
+  <td> Diccionario Espasa- Leyendas Artúricas  </td>
+  <td> Carlos Alvar </td>
+  <td>19€</td>
+  <td><img src="img/portadas/00074-diccionari_arturicas.JPG" alt="coverBook"onclick="mostrarImagenAmpliada(this)"></td>    <td>No Venta</td>
+  <td><button onclick="window.open('#', '_blank')">Ir a Wallapop</button></td>
+
+</tr>
+
+
+<tr>
+  <td>80</td>
+
+  <td>El escritor y el cine  </td>
+  <td> Francisco ayala  </td>
+  <td>8€</td>
+  <td><img src="img/portadas/00075-el escritor y el cine.JPG" alt="coverBook"onclick="mostrarImagenAmpliada(this)"></td>    <td>No Venta</td>
+  <td><button onclick="window.open('#', '_blank')">Ir a Wallapop</button></td>
+
+</tr>
+
+
+<tr>
+  <td>81</td>
+
+  <td> Nuevas historias para leer a plena luz  </td>
+  <td> Alfred Hitchcock </td>
+  <td>12€</td>
+  <td><img src="img/portadas/00076-realatos hitchcock.JPG" alt="coverBook"onclick="mostrarImagenAmpliada(this)"></td>    <td>No Venta</td>
+  <td><button onclick="window.open('#', '_blank')">Ir a Wallapop</button></td>
+
+</tr>
+
+
+<tr>
+  <td>82</td>
+
+  <td>Historias para leer a plena luz  </td>
+  <td> Alfred Hitchcock </td>
+  <td>12€</td>
+  <td><img src="img/portadas/00077-realatos hitchcock2.JPG" alt="coverBook"onclick="mostrarImagenAmpliada(this)"></td>    <td>No Venta</td>
+  <td><button onclick="window.open('#', '_blank')">Ir a Wallapop</button></td>
+
+</tr>
+
+
+<tr>
+  <td>83</td>
+
+  <td> Hitchcock   </td>
+  <td> Eric Rohmer Claude Chabrol </td>
+  <td>142€</td>
+  <td><img src="img/portadas/00078-rohmer hitchcock.JPG" alt="coverBook"onclick="mostrarImagenAmpliada(this)"></td>    <td> En Venta</td>
+  <td><button onclick="window.open('#', '_blank')">Ir a Wallapop</button></td>
+
+</tr>
+
+<tr>
+  <td>84</td>
+
+  <td> El piano - guión de la película  </td>
+  <td> Jane Campion </td>
+  <td>5€</td>
+  <td><img src="img/portadas/00080-piano.JPG" alt="coverBook"onclick="mostrarImagenAmpliada(this)"></td>    <td> No Venta</td>
+  <td><button onclick="window.open('#', '_blank')">Ir a Wallapop</button></td>
+
+</tr>
+
+<tr>
+  <td>85</td>
+
+  <td> La leyenda Sleepy Hollow   </td>
+  <td> Washington Irving </td>
+  <td>4€</td>
+  <td><img src="img/portadas/00081-Sleepy hollow.JPG" alt="coverBook"onclick="mostrarImagenAmpliada(this)"></td>    <td> No Venta</td>
+  <td><button onclick="window.open('#', '_blank')">Ir a Wallapop</button></td>
+
+</tr>
+
+<tr>
+  <td>86</td>
+
+  <td>Historias extraordinarias  </td>
+  <td> Edgar Allan Poe  </td>
+  <td>10€</td>
+  <td><img src="img/portadas/00029_historias extraordinarias.JPG" alt="coverBook"onclick="mostrarImagenAmpliada(this)"></td>    <td> No Venta</td>
+  <td><button onclick="window.open('#', '_blank')">Ir a Wallapop</button></td>
+
+</tr>
+
+<tr>
+  <td>87</td>
+
+  <td>La melancólica muerte de Chico Ostra </td>
+  <td> Tim burton   </td>
+  <td>15€</td>
+  <td><img src="img/portadas/00082-chico ostra.JPG" alt="coverBook"onclick="mostrarImagenAmpliada(this)"></td>    <td> No Venta</td>
+  <td><button onclick="window.open('#', '_blank')">Ir a Wallapop</button></td>
+
+</tr>
+
+<tr>
+  <td>88</td>
+
+  <td>Tim Burton - El diario de un soñador  </td>
+  <td> David G. Panadero | Miguel J. Parra  </td>
+  <td>5€</td>
+  <td><img src="img/portadas/00083-tim burton.JPG" alt="coverBook"onclick="mostrarImagenAmpliada(this)"></td>    <td> No Venta</td>
+  <td><button onclick="window.open('#', '_blank')">Ir a Wallapop</button></td>
+
+</tr>
+
+<tr>
+  <td>89</td>
+
+  <td>Dracula versus Frakenstein   </td>
+  <td> Angel Gomez Rivero  </td>
+  <td>16€</td>
+  <td><img src="img/portadas/00084-frakenstein_dracula.JPG" alt="coverBook"onclick="mostrarImagenAmpliada(this)"></td>    <td> No Venta</td>
+  <td><button onclick="window.open('#', '_blank')">Ir a Wallapop</button></td>
+
+</tr>
+
+
+<tr>
+  <td>90</td>
+
+  <td>Cine y fantasia heroica   </td>
+  <td> Lyle Gorch </td>
+  <td>10€</td>
+  <td><img src="img/portadas/00085-fantasia heroica.JPG" alt="coverBook"onclick="mostrarImagenAmpliada(this)"></td>    <td> En Venta</td>
+  <td><button onclick="window.open('#', '_blank')">Ir a Wallapop</button></td>
+
+</tr>
+<tr>
+  <td>91</td>
+
+  <td> Los cien mejores filmes de vampiros  </td>
+  <td> Miguel Juan Payán </td>
+  <td>15€</td>
+  <td><img src="img/portadas/00086-cien vampiros.JPG" alt="coverBook"onclick="mostrarImagenAmpliada(this)"></td>    <td> No Venta</td>
+  <td><button onclick="window.open('#', '_blank')">Ir a Wallapop</button></td>
+
+</tr>
+
+
+<tr>
+  <td>92</td>
+
+  <td>Efectos especiales de King kong a la Guerra de la galaxias     </td>
+  <td> Varios  </td>
+  <td>24€</td>
+  <td><img src="img/portadas/00087-efectos esoeciales.JPG" alt="coverBook"onclick="mostrarImagenAmpliada(this)"></td>    <td> No Venta</td>
+  <td><button onclick="window.open('#', '_blank')">Ir a Wallapop</button></td>
+
+</tr>
+
+<tr>
+  <td>93</td>
+
+  <td>Fantastica televisión   </td>
+  <td> Alfonso Merelo  </td>
+  <td>15€</td>
+  <td><img src="img/portadas/00088-fantastica tv.JPG" alt="coverBook"onclick="mostrarImagenAmpliada(this)"></td>    <td> No Venta</td>
+  <td><button onclick="window.open('#', '_blank')">Ir a Wallapop</button></td>
+
+</tr>
+
+
+<tr>
+  <td>94</td>
+
+  <td>Diccionario de Mitologia - Griega Romana  </td>
+  <td> Pierre Grimal  </td>
+  <td>10€</td>
+  <td><img src="img/portadas/00089-diccionario mitologia.JPG" alt="coverBook"onclick="mostrarImagenAmpliada(this)"></td>    <td> No Venta</td>
+  <td><button onclick="window.open('#', '_blank')">Ir a Wallapop</button></td>
+
+</tr>
+
+<tr>
+  <td>95</td>
+
+  <td> Frakenstein   </td>
+  <td> Mary Shelley  </td>
+  <td>5€</td>
+  <td><img src="img/portadas/00090-frakenstein.JPG" alt="coverBook"onclick="mostrarImagenAmpliada(this)"></td>    <td> No Venta</td>
+  <td><button onclick="window.open('#', '_blank')">Ir a Wallapop</button></td>
+
+</tr>
+
+<tr>
+  <td>96</td>
+
+  <td>Chomón - El mago de la luz  </td>
+  <td> Queco Agreda | Roberto Morote </td>
+  <td>20€</td>
+  <td><img src="img/portadas/00091-chomon.JPG" alt="coverBook"onclick="mostrarImagenAmpliada(this)"></td>    <td> No Venta</td>
+  <td><button onclick="window.open('#', '_blank')">Ir a Wallapop</button></td>
+
+</tr>
+
+<tr>
+  <td>97</td>
+
+  <td> La maquina del tiempo   </td>
+  <td> H. G Wells  </td>
+  <td>10€</td>
+  <td><img src="img/portadas/00092-maquinaTiempo.JPG" alt="coverBook"onclick="mostrarImagenAmpliada(this)"></td>    <td> No Venta</td>
+  <td><button onclick="window.open('#', '_blank')">Ir a Wallapop</button></td>
+
+</tr>
+
+<tr>
+  <td>98</td>
+
+  <td>Viaje al centro de la tierra   </td>
+  <td> Julio Verne  </td>
+  <td>10€</td>
+  <td><img src="img/portadas/00093-viaje centro tierra.JPG" alt="coverBook"onclick="mostrarImagenAmpliada(this)"></td>    <td> No Venta</td>
+  <td><button onclick="window.open('#', '_blank')">Ir a Wallapop</button></td>
+
+</tr>
+
+
+<tr>
+  <td>99</td>
+
+  <td> El fantasma de la Opera  </td>
+  <td> Gaston Leroux </td>
+  <td>10€</td>
+  <td><img src="img/portadas/00094-FantasmaOpera.JPG" alt="coverBook"onclick="mostrarImagenAmpliada(this)"></td>    <td> No Venta</td>
+  <td><button onclick="window.open('#', '_blank')">Ir a Wallapop</button></td>
+
+</tr>
+
+<tr>
+  <td>100</td>
+
+  <td>Los Universos que frecuento  </td>
+  <td> Varios  </td>
+  <td>15€</td>
+  <td><img src="img/portadas/00095-universos que frecuento.JPG" alt="coverBook"onclick="mostrarImagenAmpliada(this)"></td>    <td> No Venta</td>
+  <td><button onclick="window.open('#', '_blank')">Ir a Wallapop</button></td>
+
+</tr>
+
+<tr>
+  <td>101</td>
+
+  <td>1001 películas que hay que ver antes de morir  </td>
+  <td> Steven Jay Schneider  </td>
+  <td>16€</td>
+  <td><img src="img/portadas/00096-1001 peliculas.JPG" alt="coverBook"onclick="mostrarImagenAmpliada(this)"></td>    <td> No Venta</td>
+  <td><button onclick="window.open('#', '_blank')">Ir a Wallapop</button></td>
+
+</tr>
+
+<tr>
+  <td>102</td>
+
+  <td>Diccionario Cine  </td>
+  <td> Jose Luis Mena | Javier Cuesta  </td>
+  <td>8€</td>
+  <td><img src="img/portadas/00097-diccionario cine.JPG" alt="coverBook"onclick="mostrarImagenAmpliada(this)"></td>    <td> No Venta</td>
+  <td><button onclick="window.open('#', '_blank')">Ir a Wallapop</button></td>
+
+</tr>
+
+<tr>
+  <td>103</td>
+
+  <td>1-El libro de las sombras contadas - La espada de la verdad  </td>
+  <td> Terry Goodkind </td>
+  <td>10€</td>
+  <td><img src="img/portadas/00118-espada verdad 1.JPG" alt="coverBook"onclick="mostrarImagenAmpliada(this)"></td>    <td> No Venta</td>
+  <td><button onclick="window.open('#', '_blank')">Ir a Wallapop</button></td>
+
+</tr>
+
+<tr>
+  <td>104</td>
+
+  <td>2-las cajas del destino - La espada de la verdad  </td>
+  <td> Terry Goodkind </td>
+  <td>10€</td>
+  <td><img src="img/portadas/00117-espada verdad 2.JPG" alt="coverBook"onclick="mostrarImagenAmpliada(this)"></td>    <td> No Venta</td>
+  <td><button onclick="window.open('#', '_blank')">Ir a Wallapop</button></td>
+
+</tr>
+
+<tr>
+  <td>105</td>
+
+  <td>3- La piedra de las lagrimas - La espada de la verdad  </td>
+  <td> Terry Goodkind </td>
+  <td>10€</td>
+  <td><img src="img/portadas/00116-espada verdad 3.JPG" alt="coverBook"onclick="mostrarImagenAmpliada(this)"></td>    <td> No Venta</td>
+  <td><button onclick="window.open('#', '_blank')">Ir a Wallapop</button></td>
+
+</tr>
+
+<tr>
+  <td>106</td>
+
+  <td>4-La amenaza del custodio- La espada de la verdad  </td>
+  <td> Terry Goodkind </td>
+  <td>10€</td>
+  <td><img src="img/portadas/00115-espada verdad 4.JPG" alt="coverBook"onclick="mostrarImagenAmpliada(this)"></td>    <td> No Venta</td>
+  <td><button onclick="window.open('#', '_blank')">Ir a Wallapop</button></td>
+
+</tr>
+
+<tr>
+  <td>107</td>
+
+  <td>5-La sangre de la virtud - La espada de la verdad  </td>
+  <td> Terry Goodkind </td>
+  <td>10€</td>
+  <td><img src="img/portadas/00114-espada verdad 5.JPG" alt="coverBook"onclick="mostrarImagenAmpliada(this)"></td>    <td> No Venta</td>
+  <td><button onclick="window.open('#', '_blank')">Ir a Wallapop</button></td>
+
+</tr>
+
+<tr>
+  <td>108</td>
+
+  <td>6-El caminante de los sueños - La espada de la verdad  </td>
+  <td> Terry Goodkind </td>
+  <td>10€</td>
+  <td><img src="img/portadas/00113-espada verdad 6.JPG" alt="coverBook"onclick="mostrarImagenAmpliada(this)"></td>    <td> No Venta</td>
+  <td><button onclick="window.open('#', '_blank')">Ir a Wallapop</button></td>
+
+</tr>
+<tr>
+  <td>109</td>
+
+  <td>7-La profecía de la luna roja- La espada de la verdad  </td>
+  <td> Terry Goodkind </td>
+  <td>10€</td>
+  <td><img src="img/portadas/00112-espada verdad 7.JPG" alt="coverBook"onclick="mostrarImagenAmpliada(this)"></td>    <td> No Venta</td>
+  <td><button onclick="window.open('#', '_blank')">Ir a Wallapop</button></td>
+
+</tr>
+
+<tr>
+  <td>110</td>
+
+  <td>8-El templo de los vientos - La espada de la verdad  </td>
+  <td> Terry Goodkind </td>
+  <td>10€</td>
+  <td><img src="img/portadas/00111-espada verdad 8.JPG" alt="coverBook"onclick="mostrarImagenAmpliada(this)"></td>    <td> No Venta</td>
+  <td><button onclick="window.open('#', '_blank')">Ir a Wallapop</button></td>
+
+</tr>
+<tr>
+  <td>111</td>
+
+  <td>9-El espíritu del fuego - La espada de la verdad  </td>
+  <td> Terry Goodkind </td>
+  <td>10€</td>
+  <td><img src="img/portadas/00110-espada verdad 9.JPG" alt="coverBook"onclick="mostrarImagenAmpliada(this)"></td>    <td> No Venta</td>
+  <td><button onclick="window.open('#', '_blank')">Ir a Wallapop</button></td>
+
+</tr>
+
+<tr>
+  <td>112</td>
+
+  <td>10-El gemelo de la montaña- La espada de la verdad  </td>
+  <td> Terry Goodkind </td>
+  <td>10€</td>
+  <td><img src="img/portadas/00109-espada verdad 10.JPG" alt="coverBook"onclick="mostrarImagenAmpliada(this)"></td>    <td> No Venta</td>
+  <td><button onclick="window.open('#', '_blank')">Ir a Wallapop</button></td>
+
+</tr>
+
+<tr>
+  <td>113</td>
+
+  <td>11-La señora de la muerte - La espada de la verdad  </td>
+  <td> Terry Goodkind </td>
+  <td>10€</td>
+  <td><img src="img/portadas/00108-espada verdad 11.JPG" alt="coverBook"onclick="mostrarImagenAmpliada(this)"></td>    <td> No Venta</td>
+  <td><button onclick="window.open('#', '_blank')">Ir a Wallapop</button></td>
+
+</tr>
+
+<tr>
+  <td>114</td>
+
+  <td>12-La fe de los caídos - La espada de la verdad  </td>
+  <td> Terry Goodkind </td>
+  <td>10€</td>
+  <td><img src="img/portadas/00107-espada verdad 12.JPG" alt="coverBook"onclick="mostrarImagenAmpliada(this)"></td>    <td> No Venta</td>
+  <td><button onclick="window.open('#', '_blank')">Ir a Wallapop</button></td>
+
+</tr>
+
+<tr>
+  <td>115</td>
+
+  <td>13- La estirpe de Rahl el oscuro - La espada de la verdad  </td>
+  <td> Terry Goodkind </td>
+  <td>10€</td>
+  <td><img src="img/portadas/00106-espada verdad 13.JPG" alt="coverBook"onclick="mostrarImagenAmpliada(this)"></td>    <td> No Venta</td>
+  <td><button onclick="window.open('#', '_blank')">Ir a Wallapop</button></td>
+
+</tr>
+
+<tr>
+  <td>116</td>
+
+  <td>14-Los pilares de la creación- La espada de la verdad  </td>
+  <td> Terry Goodkind </td>
+  <td>10€</td>
+  <td><img src="img/portadas/00105-espada verdad 14.JPG" alt="coverBook"onclick="mostrarImagenAmpliada(this)"></td>    <td> No Venta</td>
+  <td><button onclick="window.open('#', '_blank')">Ir a Wallapop</button></td>
+
+</tr>
+
+<tr>
+  <td>117</td>
+
+  <td>15-Elladrón de almas - La espada de la verdad  </td>
+  <td> Terry Goodkind </td>
+  <td>10€</td>
+  <td><img src="img/portadas/00104-espada verdad 15.JPG" alt="coverBook"onclick="mostrarImagenAmpliada(this)"></td>    <td> No Venta</td>
+  <td><button onclick="window.open('#', '_blank')">Ir a Wallapop</button></td>
+
+</tr>
+
+<tr>
+  <td>118</td>
+
+  <td>16-El imperio de los vencidos- La espada de la verdad  </td>
+  <td> Terry Goodkind </td>
+  <td>10€</td>
+  <td><img src="img/portadas/00103-espada verdad 16.JPG" alt="coverBook"onclick="mostrarImagenAmpliada(this)"></td>    <td> No Venta</td>
+  <td><button onclick="window.open('#', '_blank')">Ir a Wallapop</button></td>
+
+</tr>
+
+<tr>
+  <td>119</td>
+
+  <td>17-La desaparición de Khalan - La espada de la verdad  </td>
+  <td> Terry Goodkind </td>
+  <td>10€</td>
+  <td><img src="img/portadas/00102-espada verdad 17.JPG" alt="coverBook"onclick="mostrarImagenAmpliada(this)"></td>    <td> No Venta</td>
+  <td><button onclick="window.open('#', '_blank')">Ir a Wallapop</button></td>
+
+</tr>
+
+<tr>
+  <td>120</td>
+
+  <td>18-Cadena de fuego - La espada de la verdad  </td>
+  <td> Terry Goodkind </td>
+  <td>10€</td>
+  <td><img src="img/portadas/00101-espada verdad 18.JPG" alt="coverBook"onclick="mostrarImagenAmpliada(this)"></td>    <td> No Venta</td>
+  <td><button onclick="window.open('#', '_blank')">Ir a Wallapop</button></td>
+
+</tr>
+
+<tr>
+  <td>121</td>
+
+  <td>19-la bruja del viejo mundo- La espada de la verdad  </td>
+  <td> Terry Goodkind </td>
+  <td>10€</td>
+  <td><img src="img/portadas/00100-espada verdad 19.JPG" alt="coverBook"onclick="mostrarImagenAmpliada(this)"></td>    <td> No Venta</td>
+  <td><button onclick="window.open('#', '_blank')">Ir a Wallapop</button></td>
+
+</tr>
+
+<tr>
+  <td>122</td>
+
+  <td>20-La biblioteca secreta - La espada de la verdad  </td>
+  <td> Terry Goodkind </td>
+  <td>10€</td>
+  <td><img src="img/portadas/00099-espada verdad 20.JPG" alt="coverBook"onclick="mostrarImagenAmpliada(this)"></td>    <td> No Venta</td>
+  <td><button onclick="window.open('#', '_blank')">Ir a Wallapop</button></td>
+
+</tr>
+<tr>
+  <td>123</td>
+
+  <td>21-El año de la purificación- La espada de la verdad  </td>
+  <td> Terry Goodkind </td>
+  <td>10€</td>
+  <td><img src="img/portadas/00098-espada verdad 21.JPG" alt="coverBook"onclick="mostrarImagenAmpliada(this)"></td>    <td> No Venta</td>
+  <td><button onclick="window.open('#', '_blank')">Ir a Wallapop</button></td>
+
+</tr>
+
+<tr>
+  <td>124</td>
+
+  <td>El torn del innocents  </td>
+  <td> Jordi Bonet </td>
+  <td>15€</td>
+  <td><img src="img/portadas/00119-torn innocents.JPG" alt="coverBook"onclick="mostrarImagenAmpliada(this)"></td>    <td> No Venta</td>
+  <td><button onclick="window.open('#', '_blank')">Ir a Wallapop</button></td>
+
+</tr>
+
+<tr>
+  <td>125</td>
+
+  <td>El ciclo mitológico irlandés y la mitología Céltica    </td>
+  <td> H. d'Arbols de Jubalnville </td>
+  <td>10€</td>
+  <td><img src="img/portadas/00120-celta.JPG" alt="coverBook"onclick="mostrarImagenAmpliada(this)"></td>    <td> No Venta</td>
+  <td><button onclick="window.open('#', '_blank')">Ir a Wallapop</button></td>
+
+</tr>
+
+<tr>
+  <td>126</td>
+
+  <td>Sabiduria Zen para la vida cotidiana  </td>
+  <td> Debra Shoshanna </td>
+  <td>20€</td>
+  <td><img src="img/portadas/00121-zen.JPG" alt="coverBook"onclick="mostrarImagenAmpliada(this)"></td>    <td>En Venta</td>
+  <td><button onclick="window.open('#', '_blank')">Ir a Wallapop</button></td>
+
+</tr>
+<tr>
+  <td>127</td>
+
+  <td>Tristan e Iseo </td>
+  <td> Anonimo </td>
+  <td>3€</td>
+  <td><img src="img/portadas/00122-tristan iseo.JPG" alt="coverBook"onclick="mostrarImagenAmpliada(this)"></td>    <td> No Venta</td>
+  <td><button onclick="window.open('#', '_blank')">Ir a Wallapop</button></td>
+
+</tr>
+
+<!--  -->
+
+    </tbody>
+  </table>
+
+<!-- zoom fotos -->
+
+<div id="imagenAmpliada" onclick="cerrarImagenAmpliada()">
+  <span id="cerrarImagen" onclick="cerrarImagenAmpliada()">✖</span>
+  <img id="imagenAmpliadaContenido" src="" alt="coverBook">
+</div>
+
+</main>
+<footer></footer>
+
+
+  <script src="script.js"></script>
+  <script src="filtro.js"></script>
+  <script src="/zoom.js"></script>
+</body>
+</html>
